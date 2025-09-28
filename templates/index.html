@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Auth</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Face Authentication</h1>
+    <div class="card">
+      <a href="{{ url_for('register') }}" class="btn">Register</a>
+      <a href="{{ url_for('login') }}" class="btn">Login</a>
+    </div>
+  </div>
+</body>
+</html>

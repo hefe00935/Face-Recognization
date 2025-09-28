@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #2a0b6b, #4c00ff, #7f00ff);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+  width: 320px;
+  margin: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.message {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+button, .btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(135deg, #7873f5, #ff6ec4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.link {
+  display: block;
+  margin-top: 1rem;
+  color: #ffdf7f;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

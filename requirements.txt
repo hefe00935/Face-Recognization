@@ -1,0 +1,8 @@
+PIL
+io
+base64
+deepface
+sqlite3
+pickle
+numpy
+flask

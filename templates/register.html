@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Register</h1>
+    <div class="card">
+      <form id="faceForm" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <div class="camera">
+          <video id="video" width="320" height="240" autoplay></video>
+          <button type="button" id="capture" class="btn">📸 Capture Face</button>
+        </div>
+        <input type="hidden" name="img_data" id="img_data">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <p class="message">{{ message }}</p>
+      <a href="{{ url_for('index') }}" class="link">🏠 Back Home</a>
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.createElement('canvas');
+    const captureBtn = document.getElementById('capture');
+    const imgInput = document.getElementById('img_data');
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => video.srcObject = stream)
+      .catch(err => console.error("Camera error:", err));
+
+    captureBtn.addEventListener('click', () => {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      canvas.getContext('2d').drawImage(video, 0, 0);
+      imgInput.value = canvas.toDataURL('image/jpeg');
+      alert("Face captured! Now submit the form.");
+    });
+  </script>
+</body>
+</html>
